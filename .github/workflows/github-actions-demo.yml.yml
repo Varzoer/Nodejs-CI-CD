@@ -1,0 +1,8 @@
+name: NodejsWorkflow
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Log push trigger
+      run: echo "Push trigger was triggered"
