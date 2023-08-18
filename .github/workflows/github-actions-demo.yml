@@ -10,16 +10,17 @@ jobs:
     steps:
       - name: Install software
         run: |
-          # add commands to install the necessary software
+          curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+          sudo apt-get install -y nodejs
 
       - name: checkout
         uses: actions/checkout@v3
 
       - name: install dependencies
         run: npm install
-          
+
       - name: build project
-        run: #build
+        run: npm run build
 
       - name: Run unit tests
         run: npm test
