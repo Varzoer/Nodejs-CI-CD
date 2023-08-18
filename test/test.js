@@ -1,7 +1,7 @@
 const chai = require("chai");
 const expect = chai.expect;
 const request = require("supertest");
-const app = require("../index");
+const app = require("../client");
 
 describe("GET /", function () {
   it('should return a response for the "/" route', function (done) {
