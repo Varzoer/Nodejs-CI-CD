@@ -8,7 +8,7 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Install software
+      - name: install software
         run: |
           curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
           sudo apt-get install -y nodejs
@@ -18,6 +18,9 @@ jobs:
 
       - name: install dependencies
         run: npm install
+
+      - name: install mocha
+        run: npm install --save-dev mocha
 
 #      - name: build project
 #        run: npm run build
