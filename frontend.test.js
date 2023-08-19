@@ -1,5 +1,5 @@
 const supertest = require("supertest");
-const { app, CLIENT_PORT, SERVER_PORT } = require("./frontend");
+const { app, CLIENT_PORT, SERVER_PORT } = require("frontend");
 const { request } = require("express");
 
 describe("GET Requests", () => {
