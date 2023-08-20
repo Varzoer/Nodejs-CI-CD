@@ -1,9 +1,8 @@
 module.exports = {
   entry: {
-    first: "./src/first.js",
-    second: "./src/second.js",
+    main: ["./src/first.js", "./src/second.js"],
   },
   output: {
-    filename: "build.js",
+    filename: "bundle.js",
   },
 };
