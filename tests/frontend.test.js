@@ -1,5 +1,5 @@
 const request = require("supertest");
-const { app, CLIENT_PORT, SERVER_PORT } = require("./frontend.js");
+const { app, CLIENT_PORT, SERVER_PORT } = require("../src/frontend.js");
 
 describe("GET Requests", () => {
   it("should respond with a 200 status code when accessing the root path", async () => {

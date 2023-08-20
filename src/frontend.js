@@ -6,7 +6,13 @@ require("dotenv").config();
 const CLIENT_PORT = process.env.CLIENT_PORT;
 const SERVER_PORT = process.env.SERVER_PORT;
 
+app.use(express.static("public"));
+
 app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/../public/index.html");
+});
+
+app.get("/products", (req, res) => {
   axios
     .get(`http://localhost:${SERVER_PORT}/products`)
     .then((response) => {
@@ -24,7 +30,6 @@ app.get("/", (req, res) => {
       res.end();
     });
 });
-
 
 module.exports = {
   app,

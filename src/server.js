@@ -22,7 +22,7 @@ app.listen(SERVER_PORT, () => {
   console.log(`Server running at http://localhost:${SERVER_PORT}`);
 });
 
-const db = new sqlite3.Database("softserve.db", (err) => {
+const db = new sqlite3.Database("./src/softserve.db", (err) => {
   if (err) {
     console.error(err.message);
   }
